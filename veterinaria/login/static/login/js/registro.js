@@ -3,6 +3,8 @@ $(document).ready(function(){
 $("#formulario").submit(function(e){
     e.preventDefault();
 
+
+
     var pass1 = $("#pass").val();
     var pass2 = $("#passr").val();
     var nomb = $("#nombre").val();
