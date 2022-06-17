@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    title>Registro</title>
+    
+    <link type="text/css" rel="stylesheet" href="{% static 'login\css\CSS_inicio_sesion.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</head>
+<body >
+    
+    <header>
+        <div class="container">
+            <img src="{% static 'login\img\logo.png' %}" alt="logo" class="logo" width="40" height="50">
+    
+            <nav>
+                <ul>
+                    <li><a href="{% url 'registra_medico' %}">Registrar medico</a></li>
+                    <li><a href="{% url 'registra_admin' %}">Registrar administrador</a></li>
+                    <li><a href="{% url 'lista_medicos' %}">administar medico</a></li>
+                    <li><a href="#">Perfil</a></li>
+                    <li><a href="{% url 'inicio' %}">Salir</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+   
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1>Formulario de registro de medico</h1>
+                <hr class="bg-info">
+                <p class="pb-0 mb-0">Ingrese los datos necesarios para el registro de la cita</p>
+                <p class="text-danger small pt-0 mt-0">*Todos los campos son obligatorios*</p>
+                <form method="post" id="formulario" action="{% url 'registra_medico' %}" enctype="multipart/form-data">
+
+                    <div class="row from-group">
+                        <label for="nombre_m" class="col-form-label col-md-4">nombre:</label>
+                        <div class="col-md-8">
+                            <input type="text" name="nombre_m" id="nombre_m" class="form-control" required>
+                        </div>
+                    </div>
+                    <br>
+                        <div class="row from-group">
+                            <label for="apellido" class="col-form-label col-md-4">apellido:</label>
+                            <div class="col-md-8">
+                                <input type="text" name="apellido" id="apellido_m" class="form-control" required>
+                            </div>
+                    </div>
+                    <br>
+                    <div class="row from-group">
+                        <label for="pass_m" class="col-form-label col-md-4">contraseña:</label>
+                        <div class="col-md-8">
+                            <input type="password" name="pass_m" id="pass_m" class="form-control" required>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row from-group">
+                        <label for="passr" class="col-form-label col-md-4">repetir contraseña:</label>
+                        <div class="col-md-8">
+                            <input type="password" name="passr" id="passr" class="form-control"required>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row from-group">
+                        <label for="email_m" class="col-form-label col-md-4">correo:</label>
+                        <div class="col-md-8">
+                            <input type="email" name="email_m" id="email_m" class="form-control" required>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row from-group">
+                        <label for="fechan_m" class="col-form-label col-md-4">fecha de nacimiento:</label>
+                        <div class="col-md-8">
+                            <input type="date" max="2006-05-04" name="fechan_m" id="fechan_m" class="form-control" required>
+                        </div>
+                    </div>
+                    <br>
+
+                    <p class="mensajer" id="mensaje"></p>
+                    <button type="submit" class="btn btn-info">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br>
+    <footer class="footer">
+        <div class="container">
+                <div class="row">
+                <div class="col-md-6">sucursal: av.mexico 1042</div>    
+                <div class="col-md-5">telefono: +569 242215726</div>
+                <div class="col-md-1">correo:elpatofeliz@mail.cl</div>
+            </div>
+        </div>  
+      </footer>
+
+    
+    <script src="{% static 'login/js/registro.js' %}"></script>
+
+</body>
+</html>
