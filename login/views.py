@@ -10,24 +10,35 @@ def inicio(request):
 
 def inicio_sesion(request):
     return render(request,'login/inicio_Sesion.html')
-    
+
+def admin_reg(request):
+    rol = Rol.objects.all()
+    contexto = {"rol":rol}
+    return render(request, 'login/registrar_admin.html', contexto)
     
 def registra_admin(request):
-    nombreUsuario_us = request.POST.get('nombre')
-    apellido_us = request.POST.get('apellido')
-    contra_us = request.POST.get('pass')
-    correo_us = request.POST.get('email')
-    fechNacimiento_us = request.POST.get('fechaN')
-    rol_m = 2
-    foto_us = request.FILES.get('foto_u')   
+    nombreUsuario_us = request.POST['nombre']
+    apellido_us = request.POST['apellido']
+    contra_us = request.POST['pass']
+    correo_us = request.POST['email']
+    fechNacimiento_us = request.POST['fechaN']
+    foto_us = request.FILES['foto_u']
+    rol_m = request.POST['cod']
     rol_c = Rol.objects.get(codigo = rol_m)    
-
+    
     #insert
-    Usuario.objects.create( nombreUsuario = nombreUsuario_us,apellido = apellido_us, contra= contra_us, correo = correo_us,fechNacimiento =fechNacimiento_us, foto= foto_us, rol = rol_c)
+    Usuario.objects.create( 
+                            nombreUsuario = nombreUsuario_us,
+                            apellidoUsuario = apellido_us, 
+                            contra= contra_us, 
+                            correo = correo_us,
+                            fechNacimiento =fechNacimiento_us, 
+                            foto= foto_us, 
+                            rol = rol_c)
 
     messages.success(request,'Admin registrado')
 
-    return render(request,'registra_admin')
+    return redirect('menu_admin')
 
 def registra_medico(request):
 

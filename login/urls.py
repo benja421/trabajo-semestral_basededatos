@@ -1,12 +1,13 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import eliminar_mascota, eliminar_usuario, inicio,inicio_sesion, modificar_usuario,registra_admin,registra_medico,menu_admin,menu_medico,registro_mascota,recuperar_pass,cambiar_pass,cambiar_datos,lista_usuario,perfil_medico,mascota_historial,mascota_modificar
+from .views import admin_reg, eliminar_mascota, eliminar_usuario, inicio,inicio_sesion, modificar_usuario,registra_admin,registra_medico,menu_admin,menu_medico,registro_mascota,recuperar_pass,cambiar_pass,cambiar_datos,lista_usuario,perfil_medico,mascota_historial,mascota_modificar
 
 
 urlpatterns = [
     path('',inicio,name="inicio"),
     path('inicio_sesion', inicio_sesion, name="inicio_sesion"),
     path('registra_admin/',registra_admin,name="registra_admin"),
+    path('admin_reg/',admin_reg,name="admin_reg"),
     path('registra_medico/',registra_medico,name="registra_medico"),
     path('menu_admin/',menu_admin,name="menu_admin"),
     path('menu_medico/',menu_medico,name="menu_medico"),

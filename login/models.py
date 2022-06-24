@@ -14,7 +14,7 @@ class Rol(models.Model):
 class Usuario(models.Model):
     idusu = models.AutoField(primary_key=True, verbose_name='Codigo de usuario')
     nombreUsuario = models.CharField(max_length=20,verbose_name='Nombre del usuario')
-    apellido = models.CharField(max_length=20,verbose_name='Apellido del usuario')
+    apellidoUsuario = models.CharField(max_length=20,default='apellido',verbose_name='Apellido del usuario')
     contra = models.CharField(max_length=30,verbose_name='Contraseña del usuario')
     correo = models.EmailField(verbose_name='Correo del usuario')
     fechNacimiento = models.DateTimeField(verbose_name='Fecha de nacimiento', null=True)
@@ -23,6 +23,7 @@ class Usuario(models.Model):
 
     def _str_(self):
         return self.nombreUsuario
+
 
 class Atenciones (models.Model):
   numtratamiento = models.IntegerField(primary_key=True,default=1, verbose_name='numero tratamiento')
