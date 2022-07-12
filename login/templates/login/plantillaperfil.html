@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perfil</title>
+
+
+    <link type="text/css" rel="stylesheet" href="{% static 'login\css\CSS_perfil.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <img src="{% static login\img\logo.png' %}" alt="logo" class="logo" width="40" height="50">
+    
+            <nav>
+                <ul>
+                    <li><a href="mascota_registrar.html">Registrar mascota</a></li>
+                    <li><a href="mascota_modif.html">Modificar mascota</a></li>
+                    <li><a href="mascota_historal.html">Historal de mascota</a></li>
+                    <li><a href="perfil_medico.html">Perfil</a></li>
+                    <li><a href="Principal_usuario.html">Salir</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 my-3 pt-3 shadow">
+                <img src="{% static login\img\foto_perfil.jpg' %}" class="float-left rounded-circle" height="100" width="100" alt="">
+                
+                
+                <p>
+                    <strong>nombre: Juan Perez</strong> <br>
+                    
+                    <strong>email: juan@gmail.com</strong>  <br>
+                    <strong>contraseña: juan 123</strong> <br>
+                    <strong>fecha de nacimiento 20/03/1997</strong> <br>
+                </p>
+
+            </div>
+            <div class="col-md-4">
+                <a href="cambiar_datos.html" class="btn btn-primary" value="boton" > Cambiar Datos </a>
+            </div>        
+            <div class="col-md-4">
+                <a href="cam_pass.html" class="btn btn-primary" value="boton" > Cambiar Contraseña </a>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br>
+    <footer class="footer">
+        <div class="container">
+                <div class="row">
+                <div class="col-md-6">sucursal: av.mexico 1042</div>    
+                <div class="col-md-5">telefono: +569 242215726</div>
+                <div class="col-md-1">correo:elpatofeliz@mail.cl</div>
+            </div>
+            
+        </div>  
+      </footer>
+
+    
+
+</body>
+</html>

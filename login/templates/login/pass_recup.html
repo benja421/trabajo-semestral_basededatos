@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar contraseña</title>
+
+    <link type="text/css" rel="stylesheet" href="{% static 'login\css\CCS_rec_pass.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <img src="{% static 'login\img\logo.png' %}" alt="logo" class="logo" width="40" height="50">
+    
+            <nav>
+                <ul>
+                    <li><a href="{% url 'inicio' %}">Inicio</a></li>
+    
+                    <li><a href="{% url 'inicio_sesion' %}">Iniciar sesion</a></li>
+    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            
+            <div class="col-md-8 "> 
+                <h1>Recuperar contraseña</h1>  
+                
+                <p class="pb-0 mb-0">Ingrese su correo para recuperar su contraseña</p>
+                <br>
+                <form action="" method="post" id="recpass">
+                    <div class="row from-group">
+                        <label for="email" class="col-form-label col-md-4">correo:</label>
+                        <div class="col-md-8">
+                            <input type="email" name="email" id="emailse" class="form-control">
+                        </div>
+                    </div>
+                    
+                </form>
+                <br>
+                
+                <button type="button" class="btn btn-primary">Recuperar</button>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

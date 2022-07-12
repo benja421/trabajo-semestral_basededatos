@@ -1,0 +1,20 @@
+{% extends 'login/plantillaperfil.html' %}
+{% load static %}
+
+   
+
+    
+
+{% block datos %}
+<div class="col-12 my-3 pt-3 shadow">
+    <img src="{% static login\img\foto_perfil.jpg' %}" class="float-left rounded-circle" height="100" width="100" alt=""> 
+    <p>
+        <h3><strong>nombre:</strong> {{nombre}}</h3> <br>
+        <h3><strong>apellido:</strong> {{apellido}} </h3><br>
+        <h3><strong>email: </strong> {{email}} </h3><br>
+        <h3><strong>contraseña:</strong>{{pass}} </h3><br>
+        <h3><strong>fecha de nacimiento: </strong>{f_nacimiento} </h3><br>
+    </p>
+
+</div>
+{% endblock datos %}

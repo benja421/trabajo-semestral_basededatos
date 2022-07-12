@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Inicio</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'login\css\CSS_principal.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+<header>
+    <div class="container">
+        <img src="{% static 'login\img\logo.png' %}" alt="logo" class="logo" width="40" height="50">
+
+        <nav>
+            <ul>
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+
+                <li><a href="{% url 'inicio_sesion' %}">Iniciar sesion</a></li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+
+    <div style="text-align: left;" class="container">
+        <div class="row">
+            <div class="col-12 ">
+                <h2 class="titulocentro ">Sobre Nosotros</h2>
+            </div>
+            <div class="col-12">
+                <p>
+                    Somos una clínica veterinaria/campo clínico docente de referencia y 
+                    de primer nivel en medicina de pequeños animales, 
+                    reconocida a nivel nacional por la calidad de sus profesionales, 
+                    infraestructura y equipamiento de primera línea y 
+                    de sus servicios integrales que permitan cumplir con todas las necesidades de nuestros pacientes.</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: left;" class="container-all">
+            <div class="row">
+            <div class="col-12 " >
+                <h2 class="titulocentro">Nuestro Servicios</h2>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="container">
+            
+            <div class="textoservicio"></div>
+            <h3 class="minititulo">Examenes de Rutina</h3>
+                <p>Examen de sangre</p>
+                <p>Examen de orina</p></li>
+                <p>Examen fecales</p>
+                <p>Biopsias</p>
+                <p>Citologías</p>
+                <p>Radiografia y Ecografia</p>
+
+        </div>
+    
+    
+
+
+    <div class="container-all">
+      
+        
+        
+    <h1 class="title">Nuestro equipo</h1>
+    <img src="{% static 'login\img\veterinario1.JPG' %}" alt="">    
+    <p>Nombre: Dr. Miguel Gaete</p>
+    <p>Médico Veterinario titulado de la Universidad Mayor</p>
+    <p>Diplomado en neurología veterinaria, Universidad de Chile</p>
+    <br><br><br><br><br>
+    <img src="{% static 'login\img\veterinario2.jpg' %}">
+    <p>Nombre: Dra. Mariela Arellano</p>
+    <p>Diplomado en medicina de animales pequeños, Universidad de Chile</p>
+    <p>Médico Veterinario titulado de la Universidad Mayor</p>
+    <br><br>
+    <img src="{% static 'login\img\veterinario3.JPG' %}">
+    <p>Nombre: Dra. Yolanda Nanjari</p>
+    <p>Médico Veterinario titulado de la Universidad Mayor</p>
+    <p>Diplomado en pequeños animales, HVS</p>
+
+    
+    
+</div>
+
+<div style="text-align: center;">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.649236743879!2d-70.65348472760859!3d-33.406314211906825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5d93c9c2611%3A0x685e8e883f411420!2sAv.%20M%C3%A9xico%201042%2C%20Recoleta%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1657525396621!5m2!1ses-419!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<br><br><br><br><br><br>
+<footer class="footer">
+    <div class="container">
+            <div class="row">
+            <div class="col-md-6">sucursal: av.mexico 1042</div>    
+            <div class="col-md-5">telefono: +569 242215726</div>
+            <div class="col-md-1">correo:elpatofeliz@mail.cl</div>
+        </div>
+    </div>  
+  </footer>
+  
+
+
+
+</body>
+</html>

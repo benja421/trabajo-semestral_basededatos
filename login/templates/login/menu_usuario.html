@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <link type="text/css" rel="stylesheet" href="{% static 'login\css\CCS_menu_medico.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    
+    <header>
+        <div class="container">
+            <img src="{% static 'login\img\logo.png' %}" alt="logo" class="logo" width="40" height="50">
+    
+            <nav>
+                <ul>
+                    <li><a href="{% url 'registro_mascota' %}">Registrar mascota</a></li>
+                    <li><a href="{% url 'mascota_historial' %}">Lista de mascotas</a></li>
+                    <li><a href="">Perfil</a></li>
+                    <li><a href="{% url 'inicio' %}">Salir</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<br><br><br>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <h2 style="text-align: center;">Menu</h2><br>
+            
+        </div>
+        <div class="row"><p class="h3" style="text-align: center;">Bienvenido selecione donde ir en el menu de arriba</p></div>
+        <div class="row">
+            <p class="h5" style="text-align: center;">Registro mascota: al selecionar esta opcion puedes registrar las mascotas</p>
+            <p class="h5" style="text-align: center;">Modificar mascota: al selecionar esta opciones puedes modificar los datos de la mascota </p>
+            <p class="h5" style="text-align: center;">Perfil: al selecionar esta opciones puedes revisar tu perfil de medico</p>
+            <p class="h5" style="text-align: center;">Salir: al selecionar esta opciones cierras seccion</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
